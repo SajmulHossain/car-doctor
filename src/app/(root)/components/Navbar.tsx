@@ -1,7 +1,11 @@
+import Image from "next/image";
+import Link from "next/link";
+import logo from "../../../../public/assets/logo.svg";
 
 const Navbar = () => {
-    return (
-      <nav className="navbar bg-base-100 shadow-sm">
+  return (
+    <header className="bg-base-100 shadow-sm ">
+      <nav className="section my-0 navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -12,7 +16,6 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -25,55 +28,55 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              <LinkComponent />
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link href="/">
+            <Image src={logo} alt="logo" className="size-16" />
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            <LinkComponent />
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <button className="btn btn-outline text-main">Appointment</button>
         </div>
       </nav>
-    );
+    </header>
+  );
 };
 
 export default Navbar;
+
+const LinkComponent = () => {
+  const links: { name: string; path: string }[] = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "About",
+      path: "/about",
+    },
+    {
+      name: "Services",
+      path: "/services",
+    },
+    {
+      name: "Blog",
+      path: "/blog",
+    },
+    {
+      name: "Contact",
+      path: "/contact",
+    },
+  ];
+
+  return links.map((link) => (
+    <li key={link.path}>
+      <Link href={link.path}>{link.name}</Link>
+    </li>
+  ));
+};

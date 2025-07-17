@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@theme {
+  --color-main: #ff3811;
+}
+
+@layer components {
+  .section {
+    @apply max-w-7xl mx-auto px-4 my-8 md:my-16 lg:my-32;
+  }
+}
