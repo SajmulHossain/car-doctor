@@ -6,7 +6,7 @@ import DarkToogle from "../components/DarkToogle";
 
 const Navbar = () => {
   return (
-    <header className="bg-base-100 shadow-sm sticky top-0 left-0 w-full">
+    <header className="bg-base-100 shadow-sm sticky z-50 top-0 left-0 w-full">
       <nav className="section my-0 navbar">
         <div className="navbar-start">
           <div className="dropdown">

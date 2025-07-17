@@ -25,12 +25,17 @@ const LeftSection = async ({ data }: { data: IService | null }) => {
       <p className="text-sm text-gray-600 dark:text-gray-300">{description}</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-        {
-            facility.map((data,index:number) => <div key={index} className="rounded-lg border-t-2 border-main p-4 lg:p-6 bg-gray-100 dark:bg-gray-800">
-                <h2 className="font-semibold mb-2">{data.name}</h2>
-                <p className="text-sm text-gray-600 dark:text-gray-300">{data.details}</p>
-            </div>)
-        }
+        {facility.map((data, index: number) => (
+          <div
+            key={index}
+            className="rounded-lg border-t-2 border-main p-4 lg:p-6 bg-gray-200 dark:bg-gray-900"
+          >
+            <h2 className="font-semibold mb-2 text-black dark:text-white">{data.name}</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              {data.details}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
