@@ -31,7 +31,7 @@ const LeftSection = async ({ data }: { data: IService | null }) => {
             className="rounded-lg border-t-2 border-main p-4 lg:p-6 bg-gray-200 dark:bg-gray-900"
           >
             <h2 className="font-semibold mb-2 text-black dark:text-white">{data.name}</h2>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-sm text-gray-700 dark:text-gray-300">
               {data.details}
             </p>
           </div>

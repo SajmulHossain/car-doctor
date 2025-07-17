@@ -4,9 +4,9 @@ import RightSection from "./RightSection";
 
 const Main = ({data}: {data: IService | null}) => {
     return (
-        <section className="section grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <section className="section grid grid-cols-1 lg:grid-cols-3 gap-8">
             <LeftSection data={data} />
-            <RightSection />
+            <RightSection data={data?.price} />
         </section>
     );
 };

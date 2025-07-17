@@ -2,7 +2,6 @@ import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../../public/assets/logo.svg";
-import DarkToogle from "../components/DarkToogle";
 
 const Navbar = () => {
   return (
@@ -43,7 +42,6 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <DarkToogle />
           <p><Search /></p>
           <button className="btn btn-outline text-main">Appointment</button>
         </div>
