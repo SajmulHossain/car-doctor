@@ -4,9 +4,9 @@ import Image from 'next/image';
 const Footer = () => {
     return (
       <footer className="bg-neutral text-white py-12">
-        <div className="section my-0 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="section my-0 flex flex-col lg:flex-row lg:justify-between gap-8">
           {/* Brand Info */}
-          <div>
+          <div className='w-1/3'>
             <div className="flex items-center gap-2 mb-4">
               <Image src={logo} alt="Car Doctor Logo" className="w-8 h-8" />
               <span className="text-lg font-bold">Car Doctor</span>
@@ -92,6 +92,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        <div className="divider">Copyright {new Date().getFullYear()}. All rights reserved by <a href="https://sajmul.com"><strong>Sajmul</strong></a></div>
       </footer>
     );
 };

@@ -17,7 +17,7 @@ const RightSection = ({ data }: { data: string | undefined }) => {
         <ul className="space-y-4">
           {services.map((data, index) => (
             <li
-              className="flex items-center justify-between text-white bg-gray-700 px-4 py-2 text-sm"
+              className="flex items-center justify-between text-white bg-gray-700 px-4 py-2 text-sm rounded-md"
               key={index}
             >
               {data}

@@ -10,3 +10,9 @@
     @apply max-w-7xl mx-auto px-4 my-7 md:my-10 lg:my-16;
   }
 }
+
+@layer base {
+  input {
+    @apply !w-full;
+  }
+}
