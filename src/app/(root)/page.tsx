@@ -1,7 +1,11 @@
+import Hero from "./sections/Hero";
+import Services from "./sections/Services";
 
 export default function Home() {
   return (
-    
-    <p>Hello</p>
+    <>
+      <Hero />
+      <Services />
+    </>
   );
 }

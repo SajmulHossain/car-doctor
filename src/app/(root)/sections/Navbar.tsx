@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../../public/assets/logo.svg";
+import { Search } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -21,7 +22,7 @@ const Navbar = () => {
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
@@ -40,7 +41,8 @@ const Navbar = () => {
             <LinkComponent />
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end gap-3">
+          <p><Search /></p>
           <button className="btn btn-outline text-main">Appointment</button>
         </div>
       </nav>

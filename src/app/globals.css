@@ -7,6 +7,6 @@
 
 @layer components {
   .section {
-    @apply max-w-7xl mx-auto px-4 my-8 md:my-16 lg:my-32;
+    @apply max-w-7xl mx-auto px-4 my-7 md:my-10 lg:my-16;
   }
 }
