@@ -1,11 +1,11 @@
+import { serviceCollection } from "@/app/libs/dbConnect";
 import Heading from "../components/Heading";
 import Service from "../components/Service";
-import { servicesFile } from "./service.";
+import { IService } from "@/app/types/service.types";
 
 const Services = async () => {
-  const services = servicesFile();
+  const services = await serviceCollection.find<IService>({}).toArray();
 
-  console.log(services);
   return (
     <section className="section">
       <Heading
