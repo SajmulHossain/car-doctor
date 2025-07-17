@@ -1,9 +1,28 @@
+import { ArrowRight } from "lucide-react";
 
 const RightSection = () => {
+    const services = [
+        "Full Car Repairs", "Engine Repair", "Automatic Services", "Engine Oil Change", "Battery Change"
+    ]
     return (
-        <div>
-            riht
+      <div>
+        <div className="rounded bg-main/20 dark:bg-white/20 p-4">
+          <h2 className="font-bold text-xl mb-2">Services</h2>
+          <ul className="space-y-4">
+            {services.map((data, index) => (
+              <li
+                className="flex items-center justify-between dark:bg-gray-500 px-4 py-2 text-sm"
+                key={index}
+              >
+                {data}
+                <span>
+                  <ArrowRight className="text-main" />
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
+      </div>
     );
 };
 

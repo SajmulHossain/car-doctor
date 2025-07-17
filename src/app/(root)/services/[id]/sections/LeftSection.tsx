@@ -6,8 +6,7 @@ const LeftSection = async ({ data }: { data: IService | null }) => {
     return <div>Somethig went wrong</div>;
   }
 
-  const { img, title, description, facility, price } = data || {};
-  console.log(facility);
+  const { img, title, description, facility } = data || {};
 
   return (
     <div className="lg:col-span-2 space-y-5 lg:space-y-8">

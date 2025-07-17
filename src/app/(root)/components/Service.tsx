@@ -7,7 +7,7 @@ const Service = ({ data }: { data: IService }) => {
   const { _id, img, price, title } = data || {};
   
   return (
-    <div className="p-3 border rounded-md border-base-300">
+    <div className="p-3 border rounded-md border-base-300 dark:border-gray-600">
       <div>
         <Image
           src={img}
