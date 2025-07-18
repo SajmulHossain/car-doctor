@@ -1,29 +1,15 @@
-"use client";
-
 import Link from "next/link";
-import React from "react";
+import { FormEvent } from "react";
 
-const SignUpForm = () => {
-    const handleLogin = (e:React.FormEvent<HTMLFormElement>) => {
+const LoginForm = () => {
+    const handleLogin = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
     }
     return (
       <div className="p-10 border rounded-md w-full md:w-1/2">
-        <h2 className="font-semibold text-3xl text-center">Sign Up</h2>
+        <h2 className="font-semibold text-3xl text-center">Login</h2>
 
         <form onSubmit={handleLogin} className="flex flex-col gap-6">
-          <div>
-            <label htmlFor="name" className="floating-label">
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Your name"
-              className="input"
-            />
-          </div>
           <div>
             <label htmlFor="email" className="floating-label">
               Email
@@ -51,7 +37,7 @@ const SignUpForm = () => {
 
           <div>
             <button className="btn text-lg font-semibold btn-block bg-main">
-              Sign Up
+              Login
             </button>
           </div>
 
@@ -86,10 +72,15 @@ const SignUpForm = () => {
             </svg>
             Login with Google
           </button>
-          <p>Already have an account? <Link className="text-main" href='/login'>Login</Link></p>
+          <p>
+            Don&apos;t have an account?{" "}
+            <Link className="text-main" href="/login">
+              Register
+            </Link>
+          </p>
         </form>
       </div>
     );
 };
 
-export default SignUpForm;
+export default LoginForm;
